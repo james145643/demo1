@@ -1,0 +1,1525 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10400.17.0831.1122                               -->
+<workbook source-build='10.4.0 (10400.17.0831.1122)' source-platform='win' version='10.4' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Potato crop yields and selling prices Extract' inline='true' name='federated.0sej1hj1oflmu21129af01pm8b62' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection name='dataengine.0kpjb4k0kzlol9128ay2k0pbitew'>
+            <connection class='dataengine' dbname='C:/Users/james.barksby/Downloads/Potato crop yields and selling prices.tde' schema='Extract' tablename='Extract'>
+              <calculations>
+                <calculation column='[Number of Records]' formula='1' />
+              </calculations>
+            </connection>
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <relation connection='dataengine.0kpjb4k0kzlol9128ay2k0pbitew' name='Extract' table='[Extract].[Extract]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy' name='Year1' />
+            </columns>
+          </relation>
+          <relation connection='dataengine.0kpjb4k0kzlol9128ay2k0pbitew' name='Extract1' table='[Extract].[Extract]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy' name='Year1' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Area in 1000ha (Extract1)]' value='[Extract1].[Area in 1000ha]' />
+          <map key='[Area in 1000ha]' value='[Extract].[Area in 1000ha]' />
+          <map key='[Country (Extract1)]' value='[Extract1].[Country]' />
+          <map key='[Country1 (Extract1)]' value='[Extract1].[Country1]' />
+          <map key='[Country1]' value='[Extract].[Country1]' />
+          <map key='[Country]' value='[Extract].[Country]' />
+          <map key='[EUR per 100 kg (Extract1)]' value='[Extract1].[EUR per 100 kg]' />
+          <map key='[EUR per 100 kg]' value='[Extract].[EUR per 100 kg]' />
+          <map key='[Harvested production in 1000t (Extract1)]' value='[Extract1].[Harvested production in 1000t]' />
+          <map key='[Harvested production in 1000t]' value='[Extract].[Harvested production in 1000t]' />
+          <map key='[Main area (1000 ha) (Extract1)]' value='[Extract1].[Main area (1000 ha)]' />
+          <map key='[Main area (1000 ha)]' value='[Extract].[Main area (1000 ha)]' />
+          <map key='[Number of Records (Extract1)]' value='[Extract1].[Number of Records]' />
+          <map key='[Number of Records]' value='[Extract].[Number of Records]' />
+          <map key='[Year (Extract1)]' value='[Extract1].[Year]' />
+          <map key='[Year1 (Extract1)]' value='[Extract1].[Year1]' />
+          <map key='[Year1]' value='[Extract].[Year1]' />
+          <map key='[Year]' value='[Extract].[Year]' />
+          <map key='[Yield (100 kg/ha) (Extract1)]' value='[Extract1].[Yield (100 kg/ha)]' />
+          <map key='[Yield (100 kg/ha)]' value='[Extract].[Yield (100 kg/ha)]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Area in 1000ha</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Area in 1000ha]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Area in 1000ha</remote-alias>
+            <ordinal>0</ordinal>
+            <family>Crop yields</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>242</approx-count>
+            <contains-null>true</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>34972.690000000002</statistic>
+              <statistic aggregation='Avg' datatype='real'>130.98385767790262</statistic>
+              <statistic aggregation='Min' datatype='real'>0.5</statistic>
+              <statistic aggregation='Max' datatype='real'>1922.24</statistic>
+              <statistic aggregation='Stdev' datatype='real'>359.50432659890629</statistic>
+              <statistic aggregation='StdevP' datatype='real'>358.83046597534695</statistic>
+              <statistic aggregation='Var' datatype='real'>129243.36084333307</statistic>
+              <statistic aggregation='VarP' datatype='real'>128759.30331208462</statistic>
+              <statistic aggregation='Count' datatype='integer'>267</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>38959591.833900005</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>1</ordinal>
+            <family>Potato Selling prices</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>27</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;Austria&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;United Kingdom&quot;</statistic>
+              <statistic aggregation='Count' datatype='integer'>156</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country1]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Country1</remote-alias>
+            <ordinal>2</ordinal>
+            <family>Crop yields</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>41</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;Albania&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;United Kingdom&quot;</statistic>
+              <statistic aggregation='Count' datatype='integer'>287</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>3</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EUR per 100 kg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[EUR per 100 kg]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>EUR per 100 kg</remote-alias>
+            <ordinal>3</ordinal>
+            <family>Potato Selling prices</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>151</approx-count>
+            <contains-null>true</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>3613.5599999999977</statistic>
+              <statistic aggregation='Avg' datatype='real'>23.464675324675309</statistic>
+              <statistic aggregation='Min' datatype='real'>2.73</statistic>
+              <statistic aggregation='Max' datatype='real'>67.140000000000001</statistic>
+              <statistic aggregation='Stdev' datatype='real'>10.415014938462988</statistic>
+              <statistic aggregation='StdevP' datatype='real'>10.381144881487328</statistic>
+              <statistic aggregation='Var' datatype='real'>108.47253616840722</statistic>
+              <statistic aggregation='VarP' datatype='real'>107.76816905043054</statistic>
+              <statistic aggregation='Count' datatype='integer'>154</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>101387.31019999996</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>4</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Harvested production in 1000t</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Harvested production in 1000t]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Harvested production in 1000t</remote-alias>
+            <ordinal>4</ordinal>
+            <family>Crop yields</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>265</approx-count>
+            <contains-null>true</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>1003206.9500000001</statistic>
+              <statistic aggregation='Avg' datatype='real'>3771.4546992481205</statistic>
+              <statistic aggregation='Min' datatype='real'>0.0</statistic>
+              <statistic aggregation='Max' datatype='real'>62651.699999999997</statistic>
+              <statistic aggregation='Stdev' datatype='real'>10780.990078352999</statistic>
+              <statistic aggregation='StdevP' datatype='real'>10760.705977453064</statistic>
+              <statistic aggregation='Var' datatype='real'>116229747.06954579</statistic>
+              <statistic aggregation='VarP' datatype='real'>115792793.13319412</statistic>
+              <statistic aggregation='Count' datatype='integer'>266</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>34584432539.325508</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Main area (1000 ha)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Main area (1000 ha)]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Main area (1000 ha)</remote-alias>
+            <ordinal>5</ordinal>
+            <family>Crop yields</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>197</approx-count>
+            <contains-null>true</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>25764.069999999989</statistic>
+              <statistic aggregation='Avg' datatype='real'>122.10459715639806</statistic>
+              <statistic aggregation='Min' datatype='real'>0.29999999999999999</statistic>
+              <statistic aggregation='Max' datatype='real'>1933.04</statistic>
+              <statistic aggregation='Stdev' datatype='real'>337.20982924470303</statistic>
+              <statistic aggregation='StdevP' datatype='real'>336.40980479791943</statistic>
+              <statistic aggregation='Var' datatype='real'>113710.46893924176</statistic>
+              <statistic aggregation='VarP' datatype='real'>113171.55676417427</statistic>
+              <statistic aggregation='Count' datatype='integer'>211</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>27025109.865700006</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of Records</remote-name>
+            <remote-type>16</remote-type>
+            <local-name>[Number of Records]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Number of Records</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>1</approx-count>
+            <contains-null>false</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>287.0</statistic>
+              <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+              <statistic aggregation='Min' datatype='integer'>1</statistic>
+              <statistic aggregation='Max' datatype='integer'>1</statistic>
+              <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+              <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+              <statistic aggregation='Var' datatype='real'>0.0</statistic>
+              <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+              <statistic aggregation='Count' datatype='integer'>287</statistic>
+              <statistic aggregation='Median' datatype='integer'>1</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>287.0</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>2</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>7</ordinal>
+            <family>Potato Selling prices</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>7</approx-count>
+            <contains-null>true</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>313950.0</statistic>
+              <statistic aggregation='Avg' datatype='real'>2012.5</statistic>
+              <statistic aggregation='Min' datatype='integer'>2010</statistic>
+              <statistic aggregation='Max' datatype='integer'>2015</statistic>
+              <statistic aggregation='Stdev' datatype='real'>1.7133253838567097</statistic>
+              <statistic aggregation='StdevP' datatype='real'>1.707825127659933</statistic>
+              <statistic aggregation='Var' datatype='real'>2.935483870967742</statistic>
+              <statistic aggregation='VarP' datatype='real'>2.9166666666666665</statistic>
+              <statistic aggregation='Count' datatype='integer'>156</statistic>
+              <statistic aggregation='Median' datatype='integer'>2013</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>631824830.0</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year1</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Year1]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Year1</remote-alias>
+            <ordinal>8</ordinal>
+            <family>Crop yields</family>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Yield (100 kg/ha)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Yield (100 kg/ha)]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Yield (100 kg/ha)</remote-alias>
+            <ordinal>9</ordinal>
+            <family>Crop yields</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>203</approx-count>
+            <contains-null>true</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>56851.210000000006</statistic>
+              <statistic aggregation='Avg' datatype='real'>261.98714285714289</statistic>
+              <statistic aggregation='Min' datatype='real'>25.629999999999999</statistic>
+              <statistic aggregation='Max' datatype='real'>540.0</statistic>
+              <statistic aggregation='Stdev' datatype='real'>105.66155577870639</statistic>
+              <statistic aggregation='StdevP' datatype='real'>105.41781484097417</statistic>
+              <statistic aggregation='Var' datatype='real'>11164.364369576682</statistic>
+              <statistic aggregation='VarP' datatype='real'>11112.915685845914</statistic>
+              <statistic aggregation='Count' datatype='integer'>217</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>17305788.779699996</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Area in 1000ha</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Area in 1000ha (Extract1)]</local-name>
+            <parent-name>[Extract1]</parent-name>
+            <remote-alias>Area in 1000ha</remote-alias>
+            <ordinal>10</ordinal>
+            <family>Crop yields</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>242</approx-count>
+            <contains-null>true</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>34972.690000000002</statistic>
+              <statistic aggregation='Avg' datatype='real'>130.98385767790262</statistic>
+              <statistic aggregation='Min' datatype='real'>0.5</statistic>
+              <statistic aggregation='Max' datatype='real'>1922.24</statistic>
+              <statistic aggregation='Stdev' datatype='real'>359.50432659890629</statistic>
+              <statistic aggregation='StdevP' datatype='real'>358.83046597534695</statistic>
+              <statistic aggregation='Var' datatype='real'>129243.36084333307</statistic>
+              <statistic aggregation='VarP' datatype='real'>128759.30331208462</statistic>
+              <statistic aggregation='Count' datatype='integer'>267</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>38959591.833900005</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country (Extract1)]</local-name>
+            <parent-name>[Extract1]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>11</ordinal>
+            <family>Potato Selling prices</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>27</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;Austria&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;United Kingdom&quot;</statistic>
+              <statistic aggregation='Count' datatype='integer'>156</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country1 (Extract1)]</local-name>
+            <parent-name>[Extract1]</parent-name>
+            <remote-alias>Country1</remote-alias>
+            <ordinal>12</ordinal>
+            <family>Crop yields</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>41</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;Albania&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;United Kingdom&quot;</statistic>
+              <statistic aggregation='Count' datatype='integer'>287</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>3</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EUR per 100 kg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[EUR per 100 kg (Extract1)]</local-name>
+            <parent-name>[Extract1]</parent-name>
+            <remote-alias>EUR per 100 kg</remote-alias>
+            <ordinal>13</ordinal>
+            <family>Potato Selling prices</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>151</approx-count>
+            <contains-null>true</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>3613.5599999999977</statistic>
+              <statistic aggregation='Avg' datatype='real'>23.464675324675309</statistic>
+              <statistic aggregation='Min' datatype='real'>2.73</statistic>
+              <statistic aggregation='Max' datatype='real'>67.140000000000001</statistic>
+              <statistic aggregation='Stdev' datatype='real'>10.415014938462988</statistic>
+              <statistic aggregation='StdevP' datatype='real'>10.381144881487328</statistic>
+              <statistic aggregation='Var' datatype='real'>108.47253616840722</statistic>
+              <statistic aggregation='VarP' datatype='real'>107.76816905043054</statistic>
+              <statistic aggregation='Count' datatype='integer'>154</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>101387.31019999996</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>4</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Harvested production in 1000t</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Harvested production in 1000t (Extract1)]</local-name>
+            <parent-name>[Extract1]</parent-name>
+            <remote-alias>Harvested production in 1000t</remote-alias>
+            <ordinal>14</ordinal>
+            <family>Crop yields</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>265</approx-count>
+            <contains-null>true</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>1003206.9500000001</statistic>
+              <statistic aggregation='Avg' datatype='real'>3771.4546992481205</statistic>
+              <statistic aggregation='Min' datatype='real'>0.0</statistic>
+              <statistic aggregation='Max' datatype='real'>62651.699999999997</statistic>
+              <statistic aggregation='Stdev' datatype='real'>10780.990078352999</statistic>
+              <statistic aggregation='StdevP' datatype='real'>10760.705977453064</statistic>
+              <statistic aggregation='Var' datatype='real'>116229747.06954579</statistic>
+              <statistic aggregation='VarP' datatype='real'>115792793.13319412</statistic>
+              <statistic aggregation='Count' datatype='integer'>266</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>34584432539.325508</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Main area (1000 ha)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Main area (1000 ha) (Extract1)]</local-name>
+            <parent-name>[Extract1]</parent-name>
+            <remote-alias>Main area (1000 ha)</remote-alias>
+            <ordinal>15</ordinal>
+            <family>Crop yields</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>197</approx-count>
+            <contains-null>true</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>25764.069999999989</statistic>
+              <statistic aggregation='Avg' datatype='real'>122.10459715639806</statistic>
+              <statistic aggregation='Min' datatype='real'>0.29999999999999999</statistic>
+              <statistic aggregation='Max' datatype='real'>1933.04</statistic>
+              <statistic aggregation='Stdev' datatype='real'>337.20982924470303</statistic>
+              <statistic aggregation='StdevP' datatype='real'>336.40980479791943</statistic>
+              <statistic aggregation='Var' datatype='real'>113710.46893924176</statistic>
+              <statistic aggregation='VarP' datatype='real'>113171.55676417427</statistic>
+              <statistic aggregation='Count' datatype='integer'>211</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>27025109.865700006</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of Records</remote-name>
+            <remote-type>16</remote-type>
+            <local-name>[Number of Records (Extract1)]</local-name>
+            <parent-name>[Extract1]</parent-name>
+            <remote-alias>Number of Records</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>1</approx-count>
+            <contains-null>false</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>287.0</statistic>
+              <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+              <statistic aggregation='Min' datatype='integer'>1</statistic>
+              <statistic aggregation='Max' datatype='integer'>1</statistic>
+              <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+              <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+              <statistic aggregation='Var' datatype='real'>0.0</statistic>
+              <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+              <statistic aggregation='Count' datatype='integer'>287</statistic>
+              <statistic aggregation='Median' datatype='integer'>1</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>287.0</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>2</remote-type>
+            <local-name>[Year (Extract1)]</local-name>
+            <parent-name>[Extract1]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>17</ordinal>
+            <family>Potato Selling prices</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>7</approx-count>
+            <contains-null>true</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>313950.0</statistic>
+              <statistic aggregation='Avg' datatype='real'>2012.5</statistic>
+              <statistic aggregation='Min' datatype='integer'>2010</statistic>
+              <statistic aggregation='Max' datatype='integer'>2015</statistic>
+              <statistic aggregation='Stdev' datatype='real'>1.7133253838567097</statistic>
+              <statistic aggregation='StdevP' datatype='real'>1.707825127659933</statistic>
+              <statistic aggregation='Var' datatype='real'>2.935483870967742</statistic>
+              <statistic aggregation='VarP' datatype='real'>2.9166666666666665</statistic>
+              <statistic aggregation='Count' datatype='integer'>156</statistic>
+              <statistic aggregation='Median' datatype='integer'>2013</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>631824830.0</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>2</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint16&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year1</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Year1 (Extract1)]</local-name>
+            <parent-name>[Extract1]</parent-name>
+            <remote-alias>Year1</remote-alias>
+            <ordinal>18</ordinal>
+            <family>Crop yields</family>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Yield (100 kg/ha)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Yield (100 kg/ha) (Extract1)]</local-name>
+            <parent-name>[Extract1]</parent-name>
+            <remote-alias>Yield (100 kg/ha)</remote-alias>
+            <ordinal>19</ordinal>
+            <family>Crop yields</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>203</approx-count>
+            <contains-null>true</contains-null>
+            <statistics>
+              <statistic aggregation='Sum' datatype='real'>56851.210000000006</statistic>
+              <statistic aggregation='Avg' datatype='real'>261.98714285714289</statistic>
+              <statistic aggregation='Min' datatype='real'>25.629999999999999</statistic>
+              <statistic aggregation='Max' datatype='real'>540.0</statistic>
+              <statistic aggregation='Stdev' datatype='real'>105.66155577870639</statistic>
+              <statistic aggregation='StdevP' datatype='real'>105.41781484097417</statistic>
+              <statistic aggregation='Var' datatype='real'>11164.364369576682</statistic>
+              <statistic aggregation='VarP' datatype='real'>11112.915685845914</statistic>
+              <statistic aggregation='Count' datatype='integer'>217</statistic>
+              <statistic aggregation='SumXSqr' datatype='real'>17305788.779699996</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='string' name='[Country (Extract1)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[Country1 (Extract1)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[Country1]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='real' default-format='c&quot;€&quot;#,##0.00;(&quot;€&quot;#,##0.00)' name='[EUR per 100 kg]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='date' datatype-customized='true' name='[Year]' role='dimension' type='quantitative' />
+      <column-instance column='[Country1]' derivation='None' name='[none:Country1:nk]' pivot='key' type='nominal' />
+      <extract count='-1' enabled='false' units='records'>
+        <connection class='dataengine' dbname='C:/Users/james.barksby/Documents/My Tableau Repository (Beta)/Datasources/Potato crop yields and selling prices Extract.tde' schema='Extract' tablename='Extract' update-time='09/19/2017 11:02:29 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='287' timestamp-start='2017-09-19 11:02:29.322' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Area in 1000ha</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Area in 1000ha]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Area in 1000ha</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Crop yields</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>242</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>34972.690000000002</statistic>
+                <statistic aggregation='Avg' datatype='real'>130.98385767790262</statistic>
+                <statistic aggregation='Min' datatype='real'>0.5</statistic>
+                <statistic aggregation='Max' datatype='real'>1922.24</statistic>
+                <statistic aggregation='Stdev' datatype='real'>359.50432659890623</statistic>
+                <statistic aggregation='StdevP' datatype='real'>358.8304659753469</statistic>
+                <statistic aggregation='Var' datatype='real'>129243.36084333304</statistic>
+                <statistic aggregation='VarP' datatype='real'>128759.30331208459</statistic>
+                <statistic aggregation='Count' datatype='integer'>267</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>38959591.833899997</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Country1</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Crop yields</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>41</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Albania&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;United Kingdom&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>287</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>3</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Potato Selling prices</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>27</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Austria&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;United Kingdom&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>156</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EUR per 100 kg</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[EUR per 100 kg]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EUR per 100 kg</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Potato Selling prices</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>151</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>3613.5599999999977</statistic>
+                <statistic aggregation='Avg' datatype='real'>23.464675324675309</statistic>
+                <statistic aggregation='Min' datatype='real'>2.73</statistic>
+                <statistic aggregation='Max' datatype='real'>67.140000000000001</statistic>
+                <statistic aggregation='Stdev' datatype='real'>10.415014938462985</statistic>
+                <statistic aggregation='StdevP' datatype='real'>10.381144881487323</statistic>
+                <statistic aggregation='Var' datatype='real'>108.47253616840713</statistic>
+                <statistic aggregation='VarP' datatype='real'>107.76816905043046</statistic>
+                <statistic aggregation='Count' datatype='integer'>154</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>101387.31019999995</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Harvested production in 1000t</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Harvested production in 1000t]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Harvested production in 1000t</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Crop yields</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>265</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>1003206.9500000005</statistic>
+                <statistic aggregation='Avg' datatype='real'>3771.4546992481223</statistic>
+                <statistic aggregation='Min' datatype='real'>0.0</statistic>
+                <statistic aggregation='Max' datatype='real'>62651.699999999997</statistic>
+                <statistic aggregation='Stdev' datatype='real'>10780.990078352992</statistic>
+                <statistic aggregation='StdevP' datatype='real'>10760.705977453057</statistic>
+                <statistic aggregation='Var' datatype='real'>116229747.06954564</statistic>
+                <statistic aggregation='VarP' datatype='real'>115792793.13319397</statistic>
+                <statistic aggregation='Count' datatype='integer'>266</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>34584432539.325478</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Main area (1000 ha)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Main area (1000 ha)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Main area (1000 ha)</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Crop yields</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>197</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>25764.069999999992</statistic>
+                <statistic aggregation='Avg' datatype='real'>122.10459715639807</statistic>
+                <statistic aggregation='Min' datatype='real'>0.29999999999999999</statistic>
+                <statistic aggregation='Max' datatype='real'>1933.04</statistic>
+                <statistic aggregation='Stdev' datatype='real'>337.20982924470286</statistic>
+                <statistic aggregation='StdevP' datatype='real'>336.40980479791932</statistic>
+                <statistic aggregation='Var' datatype='real'>113710.46893924166</statistic>
+                <statistic aggregation='VarP' datatype='real'>113171.55676417417</statistic>
+                <statistic aggregation='Count' datatype='integer'>211</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>27025109.865699992</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>6</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>287.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>287</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>287.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year1</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Year1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year1</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Crop yields</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='date'>#2010-01-01#</statistic>
+                <statistic aggregation='Max' datatype='date'>#2016-01-01#</statistic>
+                <statistic aggregation='Count' datatype='integer'>287</statistic>
+                <statistic aggregation='Median' datatype='date'>#2013-01-01#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Potato Selling prices</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='date'>#1905-07-04#</statistic>
+                <statistic aggregation='Max' datatype='date'>#1905-07-09#</statistic>
+                <statistic aggregation='Count' datatype='integer'>156</statistic>
+                <statistic aggregation='Median' datatype='date'>#1905-07-07#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Yield (100 kg/ha)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Yield (100 kg/ha)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Yield (100 kg/ha)</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Crop yields</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>203</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>56851.210000000006</statistic>
+                <statistic aggregation='Avg' datatype='real'>261.98714285714289</statistic>
+                <statistic aggregation='Min' datatype='real'>25.629999999999999</statistic>
+                <statistic aggregation='Max' datatype='real'>540.0</statistic>
+                <statistic aggregation='Stdev' datatype='real'>105.66155577870639</statistic>
+                <statistic aggregation='StdevP' datatype='real'>105.41781484097417</statistic>
+                <statistic aggregation='Var' datatype='real'>11164.364369576682</statistic>
+                <statistic aggregation='VarP' datatype='real'>11112.915685845914</statistic>
+                <statistic aggregation='Count' datatype='integer'>217</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>17305788.779699996</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.445019' measure-ordering='alphabetic' measure-percentage='0.554981' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Country1:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Denmark&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Netherlands&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Albania&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Italy&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;United Kingdom&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Bulgaria&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Lithuania&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Finland&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Romania&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Estonia&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Norway&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Croatia&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Luxembourg&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Iceland&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Switzerland&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Austria&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Kosovo (under United Nations Security Council Resolution 1244/99)&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Greece&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Spain&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Cyprus&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Malta&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Former Yugoslav Republic of Macedonia, the&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Serbia&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;France&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Slovakia&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Hungary&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Sweden&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Ireland&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Turkey&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;European Union (28 countries)&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Poland&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Czech Republic&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Montenegro&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Belgium&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Latvia&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Germany&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Slovenia&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;European Union (EU6-1972, EU9-1980, EU10-1985, EU12-1994, EU15-2004, EU25-2006, EU27-2013, EU28)&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Portugal&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Bosnia and Herzegovina&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Liechtenstein&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Germany&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Map2a3</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Potato crop yields and selling prices Extract' name='federated.0sej1hj1oflmu21129af01pm8b62' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0sej1hj1oflmu21129af01pm8b62'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='date' name='[Year1]' role='dimension' type='ordinal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year1]' derivation='Year' name='[yr:Year1:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0sej1hj1oflmu21129af01pm8b62].[yr:Year1:ok]'>
+            <groupfilter function='level-members' level='[yr:Year1:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0sej1hj1oflmu21129af01pm8b62].[yr:Year1:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <lod column='[federated.0sej1hj1oflmu21129af01pm8b62].[none:Country:nk]' />
+              <geometry column='[federated.0sej1hj1oflmu21129af01pm8b62].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f28e2b' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0sej1hj1oflmu21129af01pm8b62].[Latitude (generated)]</rows>
+        <cols>([federated.0sej1hj1oflmu21129af01pm8b62].[yr:Year1:ok] * [federated.0sej1hj1oflmu21129af01pm8b62].[Longitude (generated)])</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>7</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Potato crop yields and selling prices Extract' name='federated.0sej1hj1oflmu21129af01pm8b62' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0sej1hj1oflmu21129af01pm8b62'>
+            <column datatype='real' name='[Area in 1000ha (Extract1)]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Area in 1000ha]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Country1]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='real' name='[EUR per 100 kg (Extract1)]' role='measure' type='quantitative' />
+            <column datatype='real' default-format='c&quot;€&quot;#,##0.00;(&quot;€&quot;#,##0.00)' name='[EUR per 100 kg]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Harvested production in 1000t (Extract1)]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Harvested production in 1000t]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Main area (1000 ha) (Extract1)]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Main area (1000 ha)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Number of Records (Extract1)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='integer' name='[Year (Extract1)]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Year1]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Yield (100 kg/ha) (Extract1)]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Yield (100 kg/ha)]' role='measure' type='quantitative' />
+            <column-instance column='[Country1]' derivation='None' name='[none:Country1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Area in 1000ha (Extract1)]' derivation='Sum' name='[sum:Area in 1000ha (Extract1):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Area in 1000ha]' derivation='Sum' name='[sum:Area in 1000ha:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[EUR per 100 kg (Extract1)]' derivation='Sum' name='[sum:EUR per 100 kg (Extract1):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[EUR per 100 kg]' derivation='Sum' name='[sum:EUR per 100 kg:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Harvested production in 1000t (Extract1)]' derivation='Sum' name='[sum:Harvested production in 1000t (Extract1):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Harvested production in 1000t]' derivation='Sum' name='[sum:Harvested production in 1000t:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Main area (1000 ha) (Extract1)]' derivation='Sum' name='[sum:Main area (1000 ha) (Extract1):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Main area (1000 ha)]' derivation='Sum' name='[sum:Main area (1000 ha):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Number of Records (Extract1)]' derivation='Sum' name='[sum:Number of Records (Extract1):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year (Extract1)]' derivation='Sum' name='[sum:Year (Extract1):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Yield (100 kg/ha) (Extract1)]' derivation='Sum' name='[sum:Yield (100 kg/ha) (Extract1):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Yield (100 kg/ha)]' derivation='Sum' name='[sum:Yield (100 kg/ha):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year1]' derivation='Year' name='[yr:Year1:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0sej1hj1oflmu21129af01pm8b62].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <filter class='categorical' column='[federated.0sej1hj1oflmu21129af01pm8b62].[none:Country1:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter from='&quot;Albania&quot;' function='range' level='[none:Country1:nk]' to='&quot;Estonia&quot;' />
+              <groupfilter from='&quot;Finland&quot;' function='range' level='[none:Country1:nk]' to='&quot;United Kingdom&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0sej1hj1oflmu21129af01pm8b62].[:Measure Names]</column>
+            <column>[federated.0sej1hj1oflmu21129af01pm8b62].[none:Country1:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0sej1hj1oflmu21129af01pm8b62].[yr:Year1:qk]' scope='cols' value='false' />
+            <encoding attr='space' class='0' field='[federated.0sej1hj1oflmu21129af01pm8b62].[Multiple Values]' field-type='quantitative' range-type='independent' scope='rows' type='space' />
+            <format attr='subtitle' class='0' field='[federated.0sej1hj1oflmu21129af01pm8b62].[Multiple Values]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.0sej1hj1oflmu21129af01pm8b62].[Multiple Values]' scope='rows' value='true' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0sej1hj1oflmu21129af01pm8b62].[none:Country1:nk]' />
+              <size column='[federated.0sej1hj1oflmu21129af01pm8b62].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='0.0099999997764825821' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0sej1hj1oflmu21129af01pm8b62].[:Measure Names] * [federated.0sej1hj1oflmu21129af01pm8b62].[Multiple Values])</rows>
+        <cols>[federated.0sej1hj1oflmu21129af01pm8b62].[yr:Year1:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Potato crop yields and selling prices Extract' name='federated.0sej1hj1oflmu21129af01pm8b62' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0sej1hj1oflmu21129af01pm8b62'>
+            <column datatype='real' name='[Area in 1000ha]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Country1]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[Country1]' derivation='None' name='[none:Country1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Area in 1000ha]' derivation='Sum' name='[sum:Area in 1000ha:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0sej1hj1oflmu21129af01pm8b62].[sum:Area in 1000ha:qk]' palette='green_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0sej1hj1oflmu21129af01pm8b62].[sum:Area in 1000ha:qk]' />
+              <lod column='[federated.0sej1hj1oflmu21129af01pm8b62].[none:Country1:nk]' />
+              <geometry column='[federated.0sej1hj1oflmu21129af01pm8b62].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0sej1hj1oflmu21129af01pm8b62].[Latitude (generated)]</rows>
+        <cols>[federated.0sej1hj1oflmu21129af01pm8b62].[Longitude (generated)]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones use-insets='false'>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='1' name='Sheet 1' w='98400' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Dashboard 2'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones use-insets='false'>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='1' param='vert' type='layout-flow' w='98400' x='800' y='1000' />
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0sej1hj1oflmu21129af01pm8b62].[none:Country1:nk]' type='color' />
+            <card pane-specification-id='2' param='[federated.0sej1hj1oflmu21129af01pm8b62].[Multiple Values]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints />
+      <active id='1' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0sej1hj1oflmu21129af01pm8b62].[sum:Area in 1000ha:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+  </windows>
+</workbook>
